@@ -72,12 +72,12 @@ body {
     grid-template-columns: 60px 1fr;
 }
 
-.nav {
-    border: 1px solid var(--red-950);
-}
-
 .content {
+    background-color: var(--red-100);
     border: 1px solid var(--red-950);
+    border-top-right-radius: 32px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
 }
 
 .navigation {
