@@ -1,1 +1,31 @@
-console.log("Hello World!");
+const body = document.querySelector("body");
+const pageContainer = document.createElement("div");
+pageContainer.classList.add("page");
+const navContainer = document.createElement("div");
+navContainer.classList.add("nav");
+const contentContainer = document.createElement("div");
+contentContainer.classList.add("content");
+
+body.appendChild(pageContainer);
+pageContainer.appendChild(navContainer);
+pageContainer.appendChild(contentContainer);
+
+const navNavigation = document.createElement("nav");
+navNavigation.classList.add("navigation");
+
+function createNavigation(text) {
+    const button = document.createElement("div");
+    button.classList.add("nav-button");
+    const paragraph = document.createElement("p");
+    paragraph.classList.add("nav-text");
+    paragraph.innerText = text;
+    button.appendChild(paragraph);
+
+    return button;
+}
+
+navNavigation.appendChild(createNavigation("Home"));
+navNavigation.appendChild(createNavigation("Menu"));
+navNavigation.appendChild(createNavigation("Contact"));
+
+navContainer.appendChild(navNavigation);
