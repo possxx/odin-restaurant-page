@@ -69,7 +69,7 @@ body {
     width: clamp(800px, 80%, 1300px);
     height: 500px;
     display: grid;
-    grid-template-columns: 60px 1fr;
+    grid-template-columns: max-content 1fr;
 }
 
 .content {
@@ -84,6 +84,7 @@ body {
     flex-direction: column;
     align-items: flex-end;
     position: relative;
+    width: 56px;
 }
 
 .nav-button {
