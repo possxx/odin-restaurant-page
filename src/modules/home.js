@@ -20,6 +20,7 @@ export default function createHome() {
 
     const paragraphContainer = document.createElement("div");
     paragraphContainer.classList.add("paragraph");
+    paragraphContainer.classList.add("home-paragraph");
     const paragraph = document.createElement("p");
     paragraph.innerText = "Nestled in the heart of the countryside, The Rustic Bean Café offers a serene escape from the hustle and bustle of everyday life. With its sleek, modern interiors, large windows flooding the space with natural light, and exceptionally friendly staff, this cozy haven invites you to savor locally sourced delights and aromatic coffee blends. Whether you're seeking a quiet corner to read or a friendly space to connect, The Rustic Bean Café is your perfect rural retreat.";
     paragraphContainer.appendChild(paragraph);

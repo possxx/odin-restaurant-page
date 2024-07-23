@@ -30,6 +30,10 @@
     max-width: 60ch;
 }
 
+.home-paragraph {
+    max-width: 100ch;
+}
+
 .opening-hours,
 .contact {
     display: flex;
