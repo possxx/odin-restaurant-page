@@ -17,9 +17,10 @@ pageContainer.appendChild(contentContainer);
 const navNavigation = document.createElement("nav");
 navNavigation.classList.add("navigation");
 
-function createNavigation(text) {
+function createNavigation(text, value) {
     const button = document.createElement("div");
     button.classList.add("nav-button");
+    button.classList.add(`${value}`)
     const paragraph = document.createElement("p");
     paragraph.classList.add("nav-text");
     paragraph.innerText = text;
@@ -28,27 +29,39 @@ function createNavigation(text) {
     return button;
 }
 
-navNavigation.appendChild(createNavigation("Home"));
-navNavigation.appendChild(createNavigation("Menu"));
-navNavigation.appendChild(createNavigation("Contact"));
+navNavigation.appendChild(createNavigation("Home", "home"));
+navNavigation.appendChild(createNavigation("Menu", "menu"));
+navNavigation.appendChild(createNavigation("Contact", "contact"));
 
 navContainer.appendChild(navNavigation);
 
 contentContainer.appendChild(home());
 
-const navButtons = document.querySelectorAll(".nav-button");
-navButtons.forEach(button => {
-    if (button.innerText == "Home") {
-        button.addEventListener("click", () => {
-            contentContainer.replaceChildren(home());
-        })
-    } else if (button.innerText == "Menu") {
-        button.addEventListener("click", () => {
-            contentContainer.replaceChildren(menu());
-        })
-    } else if (button.innerText == "Contact") {
-        button.addEventListener("click", () => {
-            contentContainer.replaceChildren(contact());
-        })
-    }
+const homeButton = document.querySelector(".home");
+const menuButton = document.querySelector(".menu");
+const contactButton = document.querySelector(".contact");
+
+homeButton.classList.add("active-element");
+
+homeButton.addEventListener("click", () => {
+    contentContainer.replaceChildren(home());
+    homeButton.classList.add("active-element");
+    menuButton.classList.remove("active-element");
+    contactButton.classList.remove("active-element");
 })
+
+menuButton.addEventListener("click", () => {
+    contentContainer.replaceChildren(menu());
+    menuButton.classList.add("active-element");
+    homeButton.classList.remove("active-element");
+    contactButton.classList.remove("active-element");
+})
+
+contactButton.addEventListener("click", () => {
+    contentContainer.replaceChildren(contact());
+    contactButton.classList.add("active-element");
+    homeButton.classList.remove("active-element");
+    menuButton.classList.remove("active-element");
+})
+
+
