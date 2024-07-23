@@ -1,3 +1,7 @@
+import home from "./modules/home";
+import menu from "./modules/menu";
+import contact from "./modules/contact";
+
 const body = document.querySelector("body");
 const pageContainer = document.createElement("div");
 pageContainer.classList.add("page");
@@ -29,3 +33,22 @@ navNavigation.appendChild(createNavigation("Menu"));
 navNavigation.appendChild(createNavigation("Contact"));
 
 navContainer.appendChild(navNavigation);
+
+contentContainer.appendChild(home());
+
+const navButtons = document.querySelectorAll(".nav-button");
+navButtons.forEach(button => {
+    if (button.innerText == "Home") {
+        button.addEventListener("click", () => {
+            contentContainer.replaceChildren(home());
+        })
+    } else if (button.innerText == "Menu") {
+        button.addEventListener("click", () => {
+            contentContainer.replaceChildren(menu());
+        })
+    } else if (button.innerText == "Contact") {
+        button.addEventListener("click", () => {
+            contentContainer.replaceChildren(contact());
+        })
+    }
+})
