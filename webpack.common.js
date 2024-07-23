@@ -18,21 +18,6 @@ module.exports = {
                 MiniCssExtractPlugin.loader,
                 "css-loader"
             ],
-            exclude: /\.module\.css$/i,
-        },
-        {
-          test: /\.css$/i,
-          use: [
-            MiniCssExtractPlugin.loader,
-            {
-              loader: "css-loader",
-              options: {
-                importLoader: 1,
-                modules: true
-              },
-            },
-          ],
-          include: /\.module\.css$/i,
         },
         {
             test: /\.(png|svg|jpg|jpeg|gif)$/i,
