@@ -125,3 +125,7 @@ body {
     text-orientation: sideways;
 }
 
+.nav-button.active-element {
+    color: var(--red-50);
+}
+
