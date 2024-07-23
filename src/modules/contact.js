@@ -22,7 +22,7 @@ export default function createContact() {
     openingHoursHeading.classList.add("heading");
     const openingHoursParagraph = document.createElement("p");
     openingHoursParagraph.classList.add("paragraph");
-    openingHoursHeading.innerText = "Opening Hours:"
+    openingHoursHeading.innerText = "Opening Hours"
     openingHoursParagraph.innerText = "Monday - Friday: 7:00 AM - 7:00 PM\nSaturday - Sunday: 8:00 AM - 6:00 PM";
     openingHours.appendChild(openingHoursHeading);
     openingHours.appendChild(openingHoursParagraph);
