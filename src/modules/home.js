@@ -1,4 +1,4 @@
-import image from "../images/cafe-home.jpg";
+import image from "../images/cafe-home.png";
 import "./style.css";
 
 export default function createHome() {
