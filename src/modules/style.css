@@ -55,6 +55,7 @@
 .latte,
 .smoothie {
     min-width: 568px;
+    max-width: 1000px;
     display: flex;
     align-items: center;
     justify-content: center;
