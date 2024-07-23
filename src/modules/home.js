@@ -3,7 +3,7 @@ import "./style.css";
 
 export default function createHome() {
     const homeContainer = document.createElement("div");
-    homeContainer.classList.add("content-container");
+    homeContainer.classList.add("home-container");
 
     const imageContainer = document.createElement("div");
     imageContainer.classList.add("home-image")
